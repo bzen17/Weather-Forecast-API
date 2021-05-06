@@ -21,9 +21,9 @@ weatherForm.addEventListener('submit',(e)=>{
             img.src = data.image
             msg1.innerHTML = data.forecast
             h4.innerHTML = data.location
-            humidity.innerHTML = "<strong>Humidity : </strong>"+data.humidity
-            cloudcover.innerHTML = "<strong>Cloud-cover : </strong>"+data.cloudcover
-            windspeed.innerHTML = "<strong>Wind Speed : </strong>"+data.wind_speed
+            humidity.innerHTML = "<strong>Humidity : </strong>"+data.humidity+" %"
+            cloudcover.innerHTML = "<strong>Cloud-cover : </strong>"+data.cloudcover+" %"
+            windspeed.innerHTML = "<strong>Wind Speed : </strong>"+data.wind_speed+" m/sec"
         }
     })
 })
