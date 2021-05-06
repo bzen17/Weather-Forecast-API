@@ -14,7 +14,14 @@ const weather = (lat,lon,callback) =>{
             callback("Unable to connect to weatherstack API",undefined)
         }
         else{
-            callback(undefined,body.current.weather_descriptions[0]+". It is currently "+body.current.temperature+" degrees out. It feels like "+body.current.feelslike+" degrees out.")
+            callback(undefined,{
+                image: body.current.weather_icons[0],
+                message: body.current.weather_descriptions[0]+". It is currently "+body.current.temperature+" degrees. It feels like "+body.current.feelslike+" degrees outside.",
+                wind_speed: body.current.wind_speed,
+                humidity: body.current.humidity,
+                cloudcover: body.current.cloudcover
+                
+            })
             
         }
     })

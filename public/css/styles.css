@@ -59,3 +59,8 @@ button:hover{
 #msg-1 {
     margin-top: 32px;
 }
+
+#weather-icon {
+    margin-top: 32px;
+    margin-right: 8px;
+}

@@ -56,15 +56,18 @@ app.get('/weather',(req,res)=>{
             if (error){
                 return res.send({error})
             }
-            weather(lat,lon,(error,forecast)=>{
+            weather(lat,lon,(error,{image,message,wind_speed,humidity,cloudcover}={})=>{
                 if (error){
                     return res.send({error})
              
                 }
             res.send({
-                forecast,
                 location:loc,
-                address
+                forecast:message,
+                image,
+                wind_speed,
+                humidity,
+                cloudcover
             })
         })
         })
